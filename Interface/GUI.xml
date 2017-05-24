@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<nifty>
+    <useControls filename="nifty-default-controls.xml"/>
+    <useStyles filename="nifty-default-styles.xml"/>
+    <screen id="InGame" controller="mygame.gui.PlayerGUI">
+        <layer id="Foreground" childLayout="center" backgroundImage="/Interface/Crosshair.png">
+            <panel id="Left Panel" childLayout="center" backgroundImage="/Interface/transparent.png" width="20%" x="446" y="176" style="nifty-panel-simple" valign="bottom" align="left" height="10%">
+                <control name="label" id="Left Ammo Amount" backgroundColor="#99999934" color="#000000ff" width="100px" valign="bottom" text="50/100" align="left" height="33px" font="aurulent-sans-16.fnt"/>
+            </panel>
+            <panel id="Right Panel" childLayout="center" backgroundImage="/Interface/transparent.png" width="50%" style="nifty-panel-simple" valign="bottom" align="right" height="15%">
+                <control name="label" id="Right Ammo Amount" backgroundColor="#99999934" color="#000000ff" width="100px" x="281" y="31" valign="bottom" text="50/100" align="right" height="33px" font="aurulent-sans-16.fnt"/>
+                <image id="Health Bar" filename="/Interface/healthBar.png" width="50%" valign="center" align="right" height="30%"/>
+            </panel>
+        </layer>
+    </screen>
+</nifty>
