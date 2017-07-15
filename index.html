@@ -65,6 +65,18 @@
 		document.getElementById("previousSites").innerHTML = "Previous Sites: " + history.length;
 		document.getElementById("browsername").innerHTML = "Browser Name: " + navigator.appName;
 		document.getElementById("browserplatform").innerHTML = "Browser Platform: " + navigator.platform;
-		document.getElementByID("browserlanguage").innerHTML = "Browser Language: " + navigator.language;
+		document.getElementById("browserlanguage").innerHTML = "Browser Language: " + navigator.language;
+
+
+		if (navigator.geolocation) {
+        	navigator.geolocation.getCurrentPosition(showPosition);
+   		} else {
+        	document.getElementById("latitude").innerHTML = "Geolocation is not supported by this browser.";
+    }
+
+	function showPosition(position) {
+    	document.getElementById("latitude").innerHTML = "Latitude: " + position.coords.latitude + 
+    	"<br>Longitude: " + position.coords.longitude; 
+	}
 	</script>
 </html>
