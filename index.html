@@ -1,7 +1,70 @@
 <!DOCTYPE html>
 <html>
 	<body>
-		<h1>Test site</h1>
-		<p>Not supposed to be opened</p>
+		<h1>Spooky Info</h1>
+
+		<p> Most Interesting: </p>
+
+		<p id="time"></p>
+		<p id="timezone"></p>
+
+		<p id="latitude"></p>
+		<p id="longitude"></p>
+		<p id="accuracy"></p>
+		<p id="altitude"></p>
+		<p id="altitudeAccuracy"></p>
+		<p id="heading"></p>
+		<p id="speed"></p>
+		<p id="timestamp"></p>
+
+		<p id="pageon"></p>
+		<p id="referrer"></p>
+		<p id="previousSites"></p>
+
+		<p id="browsername"></p>
+		<p id="browserengine"></p>
+		<p id="browserplatform"></p>
+		<p id="browserlanguage"></p>
+
+
+		<p> Less Interesting: </p>
+
+		<p id="browserversion1a"></p>
+		<p id="browserversion1b"></p>
+		<p id="browseronline"></p>
+		<p id="javaenabled"></p>
+		<p id="datacookiesenabled"></p>
+		<p id="datacookies1"></p>
+		<p id="datacookies2"></p>
+		<p id="datastorage"></p>
+
+		<p id="screenw"></p>
+		<p id="screenh"></p>
+		<p id="docw"></p>
+		<p id="doch"></p>
+		<p id="innerw"></p>
+		<p id="innerh"></p>
+		<p id="availw"></p>
+		<p id="availh"></p>
+		<p id="colordepth"></p>
+		<p id="pixeldepth"></p>
 	</body>
+
+	<script>
+		document.getElementById("time").innerHTML = "Time: " + timeOpened:new Date();
+		document.getElementById("timezone").innerHTML = "Timezone: " + timezone:(new Date()).getTimezoneOffset()/60;
+		document.getElementById("latitude").innerHTML = "Latitude: " + position.coords.latitude;
+		document.getElementById("longitude").innerHTML = "Longitude: " + position.coords.longitude;
+		document.getElementById("accuracy").innerHTML = "Location Accuracy: " + position.coords.accuracy;
+		document.getElementById("altitude").innerHTML = "Altitude: " + position.coords.altitude;
+		document.getElementById("altitudeAccuracy").innerHTML = "Altitude Accuracy: " + position.coords.altitudeAccuracy;
+		document.getElementById("heading").innerHTML = "Heading: " + position.coords.heading;
+		document.getElementById("speed").innerHTML = "Speed: " + position.coords.speed;
+		document.getElementById("timestamp").innerHTML = "Timestamp: " + position.timestamp;
+
+		document.getElementById("previousSites").innerHTML = "Previous Sites: " + history.length;
+		document.getElementById("browsername").innerHTML = "Browser Name: " + navigator.appName;
+		document.getElementById("browserplatform").innerHTML = "Browser Platform: " + navigator.platform;
+		document.getElementByID("browserlanguage").innerHTML = "Browser Language: " + navigator.language;
+	</script>
 </html>
