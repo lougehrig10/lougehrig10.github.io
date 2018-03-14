@@ -3,25 +3,15 @@
 	<body onload="myFunction()">
 
 		<h1>Hello World!</h1>
+		
+		<button onclick="myFunction()">Get Data</button>
 
-		<p id="latitude"></p>
-		<p id="longitude"></p>
+		<p id="data"></p>
 
 		<script>
-			function myFunction() {
-
-				if (navigator.geolocation) {
-        			navigator.geolocation.getCurrentPosition(showPosition);
-   				} else {
-        			document.getElementById("latitude").innerHTML = "Geolocation is not supported by this browser.";
-    			}
-
-    			document.body.style.background = 'red';
-			}
-
-			function showPosition(position) {
-    			document.getElementById("latitude").innerHTML = "Latitude: " + position.coords.latitude + 
-    			"<br>Longitude: " + position.coords.longitude; 
+			function myFunction(){
+				var x = "User-agent: " + navigator.userAgent;
+				document.getElementById("data").innnerHTML = x;
 			}
 		</script>
 
